@@ -1,18 +1,18 @@
 # [Technopark](https://park.vk.company/) algorithms
 Реализация различных алгоритмов на С / С++ для первого семестра Технопарка.
 
-# Модуль 3
-* [Алгоритм Дейкстры для разреженных графов(задача поиска кратчайшего расстояния между городами).](modules3/cities/main.cpp)
+### Модуль 3
+* [Алгоритм Дейкстры для разреженных графов(задача поиска кратчайшего расстояния между городами).](module3/cities/main.cpp)
 * [Вычисление всех возможных кратчайших путей в неорентированном графе.](module3/NumbOfShortestPaths/main.cpp)
-* [4 разных реализации хранения графов(условие задания):](modeule3/Graphs/README(условие).md)
-    - [ListGraph](ListGraph/src/ListGraph.cpp), хранящий граф в виде массива списков смежности,
-    - [MatrixGraph](MatrixGraph/src/MatrixGraph.cpp), хранящий граф в виде матрицы смежности,
-    - [SetGraph](SetGraph/src/SetGraph.cpp), хранящий граф в виде массива хэш-таблиц/сбалансированных деревьев поиска,
-    - [ArcGraph](ArcGraph/src/ArcGraph.cpp), хранящий граф в виде одного массива пар {from, to}.
+* [4 разных реализации хранения графов(условие задания):](module3/Graphs/README(условие).md)
+    - [ListGraph](module3/Graphs/ListGraph/src/ListGraph.cpp), хранящий граф в виде массива списков смежности,
+    - [MatrixGraph](module3/Graphs/MatrixGraph/src/MatrixGraph.cpp), хранящий граф в виде матрицы смежности,
+    - [SetGraph](module3/Graphs/SetGraph/src/SetGraph.cpp), хранящий граф в виде массива хэш-таблиц/сбалансированных деревьев поиска,
+    - [ArcGraph](module3/Graphs/ArcGraph/src/ArcGraph.cpp), хранящий граф в виде одного массива пар {from, to}.
 ### Модуль 2
 * [Самобалансирующееся АВЛ-дерево. Реализация + решение задачи про распределению солдат по росту](module2/AVL_tree_using(soilders)/main.cpp)
 * [Декартово дерево.](module2/сartesian_tree/main.cpp)
-* [Обход бинарного дерева поиска в порядке in-order без рекурсии.](module2/binary-tree/main.cpp)
+* [Обход бинарного дерева поиска в порядке in-order без рекурсии.](module2/binary%20tree/main.cpp)
 * [Хеш-таблица с открытой адресацией и разрешением коллизий методом квадратичного пробирования. Вычисление хеша методом Горнера.](module2/hash_table/main.cpp)
 ### Модуль 1
 * [Реализация сортировки слиянием. Решение задачи на кол-во показов рекламы клиенту.](module1/7/adv_count_merge_sort.cpp)

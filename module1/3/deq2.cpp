@@ -24,6 +24,7 @@
 
 #define STARTING_BUFF_CAPACITY 3
 #define ARRAY_INCREASING_COEFF 2
+#define ARRAY_DECREASING_COEFF 2
 
 
 class Deque {
@@ -48,14 +49,14 @@ public:
 
 //..........................................................................
     void push_front(const int val) {
-       if(size == capacity){
-           grow();
-       }
-       head_index = ((head_index - 1) + capacity) % capacity;
+        if(size == capacity){
+            grow();
+        }
+        head_index = ((head_index - 1) + capacity) % capacity;
 
-       buffer[head_index] = val;
-       size++;
-       return;
+        buffer[head_index] = val;
+        size++;
+        return;
     }
 
     void push_back(const int val) {
@@ -119,6 +120,38 @@ private:
         head_index = 0;
         tail_index = capacity;
         capacity = new_capacity;
+    }
+
+    void shrink() {
+        size_t new_capacity = capacity / ARRAY_DECREASING_COEFF;
+        int **buffer = new int *[new_capacity];
+        if (size > 0) {
+            size_t target = 0;
+
+            if (head_index <= tail_index) {
+                for (size_t i = head_index; i <= tail_index; i++) {
+                    buffer[target] = buffer[i];
+                    target++;
+                }
+            } else {
+                for (size_t i = head_index; i < capacity; i++) {
+                    buffer[target] = buffer[i];
+                    target++;
+                }
+                for (size_t i = 0; i <= tail_index; i++) {
+                    buffer[target] = buffer[i];
+                    target++;
+                }
+            }
+            head_index = 0;
+            tail_index = target - 1;
+        } else {
+            head_index = 0;
+            tail_index = 0;
+        }
+        capacity = new_capacity;
+        delete[] buffer;
+        buffer = buffer;
     }
 
 private:
